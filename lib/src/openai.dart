@@ -23,18 +23,14 @@ class OpenAI {
 
   late OpenAIClient _client;
 
-  /// openai token
-  /// use for access for chat gpt [_token]
   static String? _token;
 
   static SharedPreferences? _prefs;
 
-  ///new instance prefs for keep my data
   void _buildShared() async {
     _prefs = await SharedPreferences.getInstance();
   }
 
-  /// set new token
   void setToken(String token) async {
     _token = token;
     await _prefs?.setString(kTokenKey, token);
@@ -42,9 +38,6 @@ class OpenAI {
 
   String getToken() => "$_token";
 
-  ///build environment for openai [build]
-  ///setup http client
-  ///setup logger
   OpenAI build({String? token, HttpSetup? baseOption, bool isLogger = false}) {
     _buildShared();
 
