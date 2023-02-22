@@ -19,7 +19,7 @@ class CompleteText {
       {required this.prompt,
       required this.model,
       this.temperature = .1,
-      this.maxTokens = 16,
+      this.maxTokens = 56,
       this.topP = 1.0,
       this.frequencyPenalty = .0,
       this.presencePenalty = -0.5,
