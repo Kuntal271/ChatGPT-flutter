@@ -18,10 +18,10 @@ class CompleteText {
   CompleteText(
       {required this.prompt,
       required this.model,
-      this.temperature = .1,
+      this.temperature = .2,
       this.maxTokens = 100,
       this.topP = 1.0,
-      this.frequencyPenalty = .0,
+      this.frequencyPenalty = -1,
       this.presencePenalty = -1,
       this.stop});
 
